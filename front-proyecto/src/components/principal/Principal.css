@@ -1,0 +1,26 @@
+#root {
+    height: 900px;
+    width: 100%;
+    display: flex;
+    border-radius: 3%;
+    background-color: white;
+    margin: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;  
+    align-items: top  ;
+    justify-content: center ;
+  }
+
+  .ppal{
+
+  }
+
+  .letra{
+    color: black;
+  }
+
+  .botones{
+    margin: 10px;
+    background-color: #64A6BD;
+    color: black;
+  }
