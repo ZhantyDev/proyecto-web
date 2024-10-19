@@ -1,23 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css'
+import Ingresoregistro from './components/ingresoregistro/Ingresoregistro'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <div id = "root">
-      <div class = "cuadrito">
-        <h1>inicio de sesion</h1>
-        <input type="text" name='input_usuario' class = 'item' placeholder='Usuario' />
-        <input type="text" name='input_contraseña' class = 'item' placeholder='Contraseña' />
-        <button class = 'botonStyle'>Iniciar</button>
-      </div>
-
-    </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Ingresoregistro/>} />
+      </Routes>
+    </Router>
   )
 }
 
