@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css'
 import Ingresoregistro from './components/ingresoregistro/Ingresoregistro'
 import Historial from './components/historial/Historial'
+import Principal from './components/principal/Principal'
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Ingresoregistro/>} />
         <Route path="/historial" element={<Historial/>} />
+        <Route path="/principal" element={<Principal/>} />
       </Routes>
     </Router>
   )
