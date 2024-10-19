@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import React from "react";
-=======
 import React from 'react'
->>>>>>> 61d180d494854accde9c25bd12ec10f3a6a84e6d
 import './Prestamos.css'
 import { useNavigate } from 'react-router-dom';
 
 function Prestamos(){
-<<<<<<< HEAD
 
     return(
         <>
@@ -28,13 +23,6 @@ function Prestamos(){
         </div>
         </>
         )
-
-=======
-    return(
-        <>
-        </>
-    )
->>>>>>> 61d180d494854accde9c25bd12ec10f3a6a84e6d
 }
 
 export default Prestamos
