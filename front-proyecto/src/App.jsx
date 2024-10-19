@@ -5,6 +5,7 @@ import './App.css'
 import Ingresoregistro from './components/ingresoregistro/Ingresoregistro'
 import Historial from './components/historial/Historial'
 import Principal from './components/principal/Principal'
+import Prestamos from './components/prestamos/Prestamos'
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Ingresoregistro/>} />
         <Route path="/historial" element={<Historial/>} />
-        <Route path="/principal" element={<Principal/>} />
+        <Route path="/home" element={<Principal/>} />
+        <Route path="/prestamos" element={<Prestamos/>} />
       </Routes>
     </Router>
   )

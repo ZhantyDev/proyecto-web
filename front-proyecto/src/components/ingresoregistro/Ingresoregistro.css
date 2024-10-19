@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     border-radius: 3%;
-    background-color: bisque;
+    background-color: #DFE2DB;
     margin: 5px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;  
@@ -19,14 +19,14 @@
     display: flex;
     border-radius: 5%;
     flex-wrap: wrap;
-    background-color: rgb(12, 116, 116);
+    background-color: #77BFA3;
     flex-direction: column;
     align-items: center;
     transition: filter 600ms;
   
   }
   .cuadrito:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #64ffce65);
   }
   
   .item{
@@ -41,11 +41,11 @@
   
   
   .botonStyle{
-    height: 35px;
-    width: 10%;
+    height: 50px;
+    width: 25%;
     margin: 5px;    
     display: flex;   
     border-radius: 10%;    
-    background-color: rgb(0, 0, 0);
+    background-color: #64A6BD;
     justify-content: center;  
   }
