@@ -20,7 +20,7 @@ function Principal(){
             <div className='boton-container'>
                 <button className='btnHistorial'><img src={icon} className='icono'/></button>
                 <button className='botones' onClick={()=>navigate('/transferencias')}>Transferencias</button>
-                <button className='botones'>Depósitos</button>
+                <button className='botones' onClick={()=>navigate('/depositos')}>Depósitos</button>
                 <button className='botones'>Retiros</button>
                 <button className='botones' onClick={()=>navigate('/prestamos')}>Préstamos</button>
             </div>

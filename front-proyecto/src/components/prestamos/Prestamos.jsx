@@ -14,7 +14,7 @@ function Prestamos(){
             </div>
             <div id="plazo">
                 <h4>Plazo (Tiempo en meses):</h4>
-                <input type="text" name='plazo' class = 'item'/>
+                <input type="number" name='plazo' class = 'item'/>
             </div>
             <button class = 'botonPrestamo'>Solicitar</button>
         </div>

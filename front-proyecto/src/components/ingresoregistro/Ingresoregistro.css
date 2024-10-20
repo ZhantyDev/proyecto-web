@@ -34,6 +34,7 @@
     border-radius: 10px;    
     background-color: #4E148C;
     justify-content: center;  
+    align-items: center;
   }
 
   .letra {

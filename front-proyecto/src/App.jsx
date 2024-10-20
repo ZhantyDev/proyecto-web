@@ -7,6 +7,7 @@ import Historial from './components/historial/Historial'
 import Principal from './components/principal/Principal'
 import Prestamos from './components/prestamos/Prestamos'
 import Transferencias from './components/transferencias/Transferencias'
+import Depositos from './components/depositos/Depositos'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" element={<Principal/>} />
         <Route path="/prestamos" element={<Prestamos/>} />
         <Route path="/transferencias" element={<Transferencias/>} />
+        <Route path="/depositos" element={<Depositos/>} />
       </Routes>
     </Router>
   )
