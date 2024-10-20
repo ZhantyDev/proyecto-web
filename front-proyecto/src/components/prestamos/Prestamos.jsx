@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
 import './Prestamos.css'
 import { useNavigate } from 'react-router-dom';
+import icon from '../../assets/retroceso-rapido.png'
 
 function Prestamos(){
+    const navigate = useNavigate()
     return(
         <>
+        <button className='btnRetroceder' onClick={()=>navigate('/home')}><img src={icon} className='icono'/></button>
         <div className = "cuadrado">
         <h1>Préstamos</h1>
         <p>Para solicitar tu préstamo en Banco Armandoestebanquito ingresa los siguientes datos:</p>
