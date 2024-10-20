@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import './Depositos.css'
 import { useNavigate } from 'react-router-dom';
+import icon from '../../assets/retroceso-rapido.png'
 
 function Depositos(){
+    const navigate = useNavigate()
     const [banco, setBanco] = useState('');
 
     const handleBancoChange = (e) => {
@@ -12,6 +14,7 @@ function Depositos(){
     return(
         <>
         <div id = "root">
+        <button className='btnRetroceder' onClick={()=>navigate('/home')}><img src={icon} className='icono'/></button>
         <div className = "cuadrado">
         <h1>Depósitos</h1>
         <div id="banco">

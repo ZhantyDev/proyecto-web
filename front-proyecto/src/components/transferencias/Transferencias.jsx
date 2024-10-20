@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import './Transferencias.css'
 import { useNavigate } from 'react-router-dom';
+import icon from '../../assets/retroceso-rapido.png'
 
 function Transferencias(){
+    const navigate = useNavigate()
     const [banco, setBanco] = useState('');
 
     const handleBancoChange = (e) => {
@@ -12,6 +14,7 @@ function Transferencias(){
     return(
         <>
         <div id = "root">
+        <button className='btnRetroceder' onClick={()=>navigate('/home')}><img src={icon} className='icono'/></button>
         <div className = "cuadrado">
         <h1>Transferencias</h1>
         <div id="banco">
@@ -41,7 +44,6 @@ function Transferencias(){
         <div id="monto">
             <h4>Dinero:</h4>
             <input type="number" name='dineroPrestamo' className = 'item'/>
-            <input type="text" name='dineroTransferido' className = 'item'/>
         </div>
         <button className = 'botonTransaccion'>Confirmar</button>
         
