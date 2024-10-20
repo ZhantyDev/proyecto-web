@@ -1,0 +1,59 @@
+#root {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    border-radius: 0;
+    background-color: #bbd0ff;
+    margin: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;  
+    align-items: top  ;
+    justify-content: center ;
+  }
+  
+  .btnRetroceder{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 70px;
+    height: 70px; 
+    border: none;
+    background-color: transparent;
+    color: black;
+  }
+
+  .icono{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .cuadrado {
+    height: 550px;
+    width: 550px;
+    margin: 80px;    
+    display: flex;
+    border-radius: 30px;
+    flex-wrap: wrap;
+    background-color: #858AE3;
+    flex-direction: column;
+    align-items: center;
+    transition: filter 600ms;
+  }
+  .cuado:hover {
+    filter: drop-shadow(0 0 2em #64ffce65);
+  }
+
+  .botonRetiro{
+    height: 50px;
+    width: 25%;
+    margin: 10px;    
+    display: flex;   
+    border-radius: 10%;    
+    background-color: #4E148C;
+    align-items: center; 
+    justify-content: center;
+    color: #c8b6ff; 
+  }

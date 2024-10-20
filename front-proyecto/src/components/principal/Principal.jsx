@@ -12,7 +12,7 @@ function Principal(){
         setSidebarOpen(!isSidebarOpen);
     };
 
-    return(
+    return( 
         <>
         <div id='ppal'>
             <h1 className='letra'>Bienvenido a su banco Armandoestebanquito</h1>
@@ -21,14 +21,14 @@ function Principal(){
                 <button className='btnHistorial' onClick={()=>navigate('/historial')}><img src={icon} className='icono'/></button>
                 <button className='botones' onClick={()=>navigate('/transferencias')}>Transferencias</button>
                 <button className='botones' onClick={()=>navigate('/depositos')}>Depósitos</button>
-                <button className='botones'>Retiros</button>
+                <button className='botones' onClick={()=>navigate('/retiros')}>Retiros</button>
                 <button className='botones' onClick={()=>navigate('/prestamos')}>Préstamos</button>
             </div>
 
             <button className='menu-button' onClick={toggleSidebar}>☰</button>
 
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
-                <a href="#" className="closebtn" onClick={toggleSidebar}>×</a>
+            <a href="#" className="closebtn" onClick={toggleSidebar}>×</a>
                 <a href="#">Perfil</a>
                 <a href="#">Configuración</a>
                 <div class="dropdown">
@@ -46,7 +46,7 @@ function Principal(){
                 <a href="#">Cerrar sesión</a>
             </div>
         </div>
-        </>
+        </>
     )
 }
 
