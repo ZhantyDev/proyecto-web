@@ -2,7 +2,7 @@ import React from 'react'
 import './registro.css'
 import { useNavigate } from 'react-router-dom';
 
-function Ingresoregistro(){
+function registro(){
     const navigate = useNavigate()
     return(
         <>
@@ -19,4 +19,4 @@ function Ingresoregistro(){
     )
 }
 
-export default Ingresoregistro
+export default registro
