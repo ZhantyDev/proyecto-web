@@ -1,26 +1,102 @@
-#root {
-    height: 900px;
-    width: 100%;
-    display: flex;
-    border-radius: 3%;
+  #ppal{
+    text-align: center;
     background-color: white;
-    margin: 5px;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;  
-    align-items: top  ;
-    justify-content: center ;
-  }
-
-  .ppal{
-
   }
 
   .letra{
     color: black;
+    font-size: 2em;
   }
+
+  .btnHistorial{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border: none;
+    background-color: transparent;
+    color: black;
+  }
+
+  .icono{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .boton-container {
+    display: flex; /* Usar flexbox para centrar los elementos */
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 20px; /* Espacio en la parte superior, ajusta según sea necesario */
+}
 
   .botones{
     margin: 10px;
+    display: flex;
+    width: 250px;
+    height: 100px;
+    padding: 150px 220px;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;
     background-color: #64A6BD;
     color: black;
+    font-size: 1.5em;
+  }
+
+  .menu-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+  }
+
+  /* Sidebar (ventana lateral) */
+  .sidebar {
+    height: 100%; /* Ocupa toda la altura de la pantalla */
+    width: 0; /* Comienza con ancho 0 (oculto) */
+    position: fixed; /* Fijo en la pantalla */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Color de fondo */
+    overflow-x: hidden; /* Desactiva scroll horizontal */
+    transition: 0.5s; /* Transición suave */
+    padding-top: 60px; /* Espacio en la parte superior */
+  }
+
+  /* Cuando el sidebar está abierto, le damos ancho */
+  .sidebar.open {
+    width: 250px; /* Puedes ajustar el ancho del sidebar */
+  }
+
+  /* Estilo de los enlaces dentro del sidebar */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  /* Cambiar color al pasar el ratón sobre los enlaces */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+  /* Estilo del botón de cerrar (×) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
   }

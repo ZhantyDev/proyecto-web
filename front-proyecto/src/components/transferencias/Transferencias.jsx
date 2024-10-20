@@ -1,13 +1,13 @@
 import React from 'react'
-import './Transacciones.css'
+import './Transferencias.css'
 import { useNavigate } from 'react-router-dom';
 
-function Transacciones(){
+function Transferencias(){
     return(
         <>
         <div id = "root">
         <div class = "cuadrado">
-        <h1>Transacciones</h1>
+        <h1>Transferencias</h1>
         <div id="banco">
             <h4>Banco:</h4>
             <input type="combobox" name='bancoPrestamo' class = 'item'/>
@@ -28,4 +28,4 @@ function Transacciones(){
     )
 }
 
-export default Transacciones
+export default Transferencias

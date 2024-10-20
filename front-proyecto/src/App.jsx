@@ -6,7 +6,7 @@ import Ingresoregistro from './components/ingresoregistro/Ingresoregistro'
 import Historial from './components/historial/Historial'
 import Principal from './components/principal/Principal'
 import Prestamos from './components/prestamos/Prestamos'
-import Transacciones from './components/transacciones/Transacciones'
+import Transferencias from './components/transferencias/Transferencias'
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route path="/historial" element={<Historial/>} />
         <Route path="/home" element={<Principal/>} />
         <Route path="/prestamos" element={<Prestamos/>} />
-        <Route path="/transacciones" element={<Transacciones/>} />
+        <Route path="/transferencias" element={<Transferencias/>} />
       </Routes>
     </Router>
   )

@@ -2,7 +2,7 @@
     height: 900px;
     width: 100%;
     display: flex;
-    border-radius: 3%;
+    border-radius: 0;
     background-color: #DFE2DB;
     margin: 5px;
     font-family: 'Times New Roman', Times, serif;
@@ -17,7 +17,7 @@
     width: 30%;
     margin: 80px;    
     display: flex;
-    border-radius: 5%;
+    border-radius: 0;
     flex-wrap: wrap;
     background-color: #77BFA3;
     flex-direction: column;
