@@ -1,7 +1,8 @@
-#root{
-  height: 800px;
+#cuadro{
+  height: 600px;
   width: 100%;
   display: flex;
+  justify-content: center;
   background-color: DFE2DB;
 }
 

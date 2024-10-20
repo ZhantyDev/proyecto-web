@@ -6,7 +6,7 @@ function Ingresoregistro(){
     const navigate = useNavigate()
     return(
         <>
-        <div id = "root">
+        <div id = "cuadro">
             <div class = "cuadrito" >
                 <h1 class = "letra" >Inicio de sesion</h1>
                 <input type="text" name='input_usuario' class = 'item' placeholder='Usuario' />
