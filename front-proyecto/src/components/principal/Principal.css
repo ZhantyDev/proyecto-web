@@ -38,9 +38,9 @@
   .botones{
     margin: 10px;
     display: flex;
-    width: 250px;
-    height: 100px;
-    padding: 150px 220px;
+    width: 200px;
+    height: 50px;
+    padding: 120px 215px;
     justify-content: center;
     align-items: center;
     background-color: #858AE3;

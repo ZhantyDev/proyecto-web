@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import './Transferencias.css'
+import './Depositos.css'
 import { useNavigate } from 'react-router-dom';
 
-function Transferencias(){
+function Depositos(){
     const [banco, setBanco] = useState('');
 
     const handleBancoChange = (e) => {
@@ -13,7 +13,7 @@ function Transferencias(){
         <>
         <div id = "root">
         <div className = "cuadrado">
-        <h1>Transferencias</h1>
+        <h1>Depósitos</h1>
         <div id="banco">
             <h4>Banco:</h4>
             <select
@@ -40,10 +40,9 @@ function Transferencias(){
         </div>
         <div id="monto">
             <h4>Dinero:</h4>
-            <input type="number" name='dineroPrestamo' className = 'item'/>
-            <input type="text" name='dineroTransferido' className = 'item'/>
+            <input type="text" name='dineroDepositado' className = 'item'/>
         </div>
-        <button className = 'botonTransaccion'>Confirmar</button>
+        <button className = 'botonDeposito'>Confirmar</button>
         
         </div>
         </div>
@@ -51,4 +50,4 @@ function Transferencias(){
     )
 }
 
-export default Transferencias
+export default Depositos
