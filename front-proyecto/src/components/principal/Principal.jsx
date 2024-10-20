@@ -31,12 +31,22 @@ function Principal(){
                 <a href="#" className="closebtn" onClick={toggleSidebar}>×</a>
                 <a href="#">Perfil</a>
                 <a href="#">Configuración</a>
+                <div class="dropdown">
+                    <button className='dropbtn' onClick={toggleSidebar}> Transacciones </button>
+                    <div class="dropdown-content">
+                        <a href="#">Transferencias</a>
+                        <a href="#">Depósitos</a>
+                        <a href="#">Préstamos</a>
+                        <a href="#">Retiros</a>
+                        <a href="#">Historial</a>
+                    </div>                    
+                </div>
                 <a href="#">Ayuda</a>
                 <a href="#">Sobre Armandoestebanquito</a>
                 <a href="#">Cerrar sesión</a>
             </div>
         </div>
-        </>
+        </>
     )
 }
 
