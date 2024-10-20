@@ -29,7 +29,7 @@ function Principal(){
 
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
             <a href="#" className="closebtn" onClick={toggleSidebar}>×</a>
-                <a href="#">Perfil</a>
+                <a onClick={()=> navigate('/perfil')}>Perfil</a>
                 <a href="#">Configuración</a>
                 <div class="dropdown">
                     <button className='dropbtn' onClick={toggleSidebar}> Transacciones </button>

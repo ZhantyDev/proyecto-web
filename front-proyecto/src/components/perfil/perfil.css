@@ -1,0 +1,23 @@
+#fondo{
+    height: auto;
+    width: 60%;
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    transition: filter 600ms;
+}
+.fondo:hover{
+    filter: drop-shadow(0 0 2em #9baed8);
+  }
+
+.texto{
+    color: black;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.foto{
+    width: 200px;
+    height: 200px;
+}
