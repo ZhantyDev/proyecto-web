@@ -40,7 +40,7 @@ function Transferencias(){
         </div>
         <div id="monto">
             <h4>Dinero:</h4>
-            <input type="text" name='dineroPrestamo' className = 'item'/>
+            <input type="number" name='dineroPrestamo' className = 'item'/>
         </div>
         <button className = 'botonTransaccion'>Confirmar</button>
         

@@ -1,0 +1,67 @@
+table {
+    font-family: 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+td, th {
+    border: 1px solid #2C0735;
+    text-align: left;
+    padding: 8px;
+  }
+  
+tr:nth-child(even) {
+    background-color: #2C0735;
+  }
+
+.Letra {
+    color: #2C0735;
+}
+
+
+.menu-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+  }
+
+  .sidebar {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    background-color: #9999ff; 
+    overflow-x: hidden;
+    padding-top: 60px;
+  }
+
+  .sidebar.open {
+    width: 280px;
+  }
+
+  .sidebar a {
+    padding: 8px 8px 8px 3px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #2C0735;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidebar a:hover {
+    color: #613DC1;
+  }
+
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }

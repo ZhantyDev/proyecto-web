@@ -10,7 +10,7 @@ function Prestamos(){
         <p>Para solicitar tu préstamo en Banco Armandoestebanquito ingresa los siguientes datos:</p>
             <div id='monto'>
                 <h4>Monto:</h4>
-                <input type="text" name='dineroPrestamo' class = 'item'/>
+                <input type="number" name='dineroPrestamo' class = 'item'/>
             </div>
             <div id="plazo">
                 <h4>Plazo (Tiempo en meses):</h4>
