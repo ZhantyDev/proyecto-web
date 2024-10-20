@@ -41,7 +41,7 @@ function Principal(){
                         <a href="#">Historial</a>
                     </div>                    
                 </div>
-                <a href="#">Ayuda</a>
+                <a onClick={()=> navigate('/ayuda')}>Ayuda</a>
                 <a onClick={()=>navigate('/nosotros')}>Sobre Armandoestebanquito</a>
                 <a onClick={()=>navigate('/')}>Cerrar sesión</a>
             </div>

@@ -11,6 +11,7 @@ import Transferencias from './components/transferencias/Transferencias'
 import Depositos from './components/depositos/Depositos'
 import Retiros from './components/retiros/Retiros'
 import Nosotros from './components/sobreNos/nosotros'
+import Ayuda from './components/ayuda/ayuda'
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
         <Route path="/depositos" element={<Depositos/>} />
         <Route path="/retiros" element={<Retiros/>} />
         <Route path="/nosotros" element={<Nosotros/>} />
+        <Route path="/ayuda" element={<Ayuda/>} />
+
         
       </Routes>
     </Router>
