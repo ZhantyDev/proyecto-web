@@ -1,6 +1,6 @@
   #ppal{
     text-align: center;
-    background-color: white;
+    background-color: #bbd0ff;
   }
 
   .letra{
@@ -43,7 +43,7 @@
     padding: 150px 220px;
     justify-content: center;
     align-items: center;
-    background-color: #64A6BD;
+    background-color: #858AE3;
     color: black;
     font-size: 1.5em;
   }
@@ -65,27 +65,27 @@
     position: fixed; 
     top: 0;
     left: 0;
-    background-color: white; 
+    background-color: #9999ff; 
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
   }
 
   .sidebar.open {
-    width: 250px;
+    width: 280px;
   }
 
   .sidebar a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 3px;
     text-decoration: none;
     font-size: 25px;
-    color: black;
+    color: #2C0735;
     display: block;
     transition: 0.3s;
   }
 
   .sidebar a:hover {
-    color: #f1f1f1;
+    color: #613DC1;
   }
 
   .sidebar .closebtn {

@@ -25,7 +25,7 @@ function Principal(){
                 <button className='botones' onClick={()=>navigate('/prestamos')}>Préstamos</button>
             </div>
 
-            <button className='menu-button' onClick={toggleSidebar}>⋮</button>
+            <button className='menu-button' onClick={toggleSidebar}>☰</button>
 
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
                 <a href="#" className="closebtn" onClick={toggleSidebar}>×</a>
