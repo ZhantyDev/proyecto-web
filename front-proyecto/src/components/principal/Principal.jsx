@@ -43,7 +43,7 @@ function Principal(){
                 </div>
                 <a href="#">Ayuda</a>
                 <a href="#">Sobre Armandoestebanquito</a>
-                <a href="#">Cerrar sesión</a>
+                <a onClick={()=>navigate('/')}>Cerrar sesión</a>
             </div>
         </div>
         </>
