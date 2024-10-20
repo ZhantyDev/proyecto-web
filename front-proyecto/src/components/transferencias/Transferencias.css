@@ -28,8 +28,18 @@
     filter: drop-shadow(0 0 2em #64ffce65);
   }
   
-  .item{
-    height: 20px;
+  #cuenta .item{
+    height: 40px;
+    width: 200px;
+    display: flex; 
+    margin: 10px;  
+    background-color: #bbd0ff;
+    text-align: center;   
+    transition: filter 600ms; 
+  }
+
+  #monto .item{
+    height: 40px;
     width: 200px;
     display: flex; 
     margin: 10px;  
@@ -45,13 +55,18 @@
     display: flex;   
     border-radius: 10%;    
     background-color: #4E148C;
-    justify-content: center; 
+    align-items: center; 
+    justify-content: center;
     color: #c8b6ff; 
   }
 
     #banco{
         flex-direction: row;
         color: black;
+    }
+
+    #banco select{
+      background-color: #bbd0ff; ;
     }
 
     #cuenta{

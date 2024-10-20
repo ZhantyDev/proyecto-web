@@ -3,12 +3,6 @@ import './Prestamos.css'
 import { useNavigate } from 'react-router-dom';
 
 function Prestamos(){
-    const [bancoPrestamo, setBancoPrestamo] = useState(''); // Estado para el banco seleccionado
-
-    const handleBancoChange = (e) => {
-        setBancoPrestamo(e.target.value);
-    };
-
     return(
         <>
         <div className = "cuadrado">
