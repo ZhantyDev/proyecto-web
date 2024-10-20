@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Historial.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -12,9 +12,9 @@ function Historial(){
 
     return(
         <>
-        <div >
+        <div id='ppal' >
         <h1 class="Letra">Historial de movimientos</h1>
-        <div>
+        <div id='tablaa'>
         <table>
             <tr>
                 <th class="Letra" >Tipo de movimiento</th>

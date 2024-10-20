@@ -16,7 +16,9 @@ tr:nth-child(even) {
 
 .Letra {
     color: #2C0735;
-}
+    text-align: center;
+    font-size: 2em;
+    justify-content: center;
 
 
 .menu-button {
@@ -65,3 +67,7 @@ tr:nth-child(even) {
     font-size: 36px;
     margin-left: 50px;
   }
+
+#tablaa{
+
+}
