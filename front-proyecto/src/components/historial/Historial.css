@@ -19,7 +19,7 @@ tr:nth-child(even) {
     text-align: center;
     font-size: 2em;
     justify-content: center;
-
+}
 
 .menu-button {
     position: absolute;
