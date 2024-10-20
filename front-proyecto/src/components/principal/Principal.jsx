@@ -1,15 +1,15 @@
 import React, {useState} from 'react'
 import './Principal.css'
 import { useNavigate } from 'react-router-dom';
-import icon from '../../assets/depositphotos_119717876-stock-illustration-refund-flat-vector-icon.jpg'; // Ajusta la ruta
+import icon from '../../assets/depositphotos_119717876-stock-illustration-refund-flat-vector-icon.jpg';
 
 
 function Principal(){
     const navigate = useNavigate()
-    const [isSidebarOpen, setSidebarOpen] = useState(false); // Estado para controlar el menú desplegable
+    const [isSidebarOpen, setSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
-        setSidebarOpen(!isSidebarOpen); // Alterna el estado del menú desplegable
+        setSidebarOpen(!isSidebarOpen);
     };
 
     return(
@@ -27,11 +27,12 @@ function Principal(){
 
             <button className='menu-button' onClick={toggleSidebar}>⋮</button>
 
-            {/* Sidebar */}
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
-                <a href="#" className="closebtn" onClick={toggleSidebar}>×</a> {/* Botón para cerrar el sidebar */}
+                <a href="#" className="closebtn" onClick={toggleSidebar}>×</a>
                 <a href="#">Perfil</a>
                 <a href="#">Configuración</a>
+                <a href="#">Ayuda</a>
+                <a href="#">Sobre Armandoestebanquito</a>
                 <a href="#">Cerrar sesión</a>
             </div>
         </div>

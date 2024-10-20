@@ -1,25 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Prestamos.css'
 import { useNavigate } from 'react-router-dom';
 
 function Prestamos(){
+    const [bancoPrestamo, setBancoPrestamo] = useState(''); // Estado para el banco seleccionado
+
+    const handleBancoChange = (e) => {
+        setBancoPrestamo(e.target.value);
+    };
 
     return(
         <>
-        <div id = "root">
-        <div class = "cuadrado">
-        <h1>Prestamos</h1>
-        <div id="banco">
-            <h4>Banco:</h4>
-            <input type="combobox" name='bancoPrestamo' class = 'item'/>
-        </div>
-        <div id="monto">
-            <h4>Monto:</h4>
-            <input type="text" name='dineroPrestamo' class = 'item'/>
-        </div>
-        <button class = 'botonPrestamo'>Solicitar</button>
-        
-        </div>
+        <div className = "cuadrado">
+        <h1>Préstamos</h1>
+        <p>Para solicitar tu préstamo en Banco Armandoestebanquito ingresa los siguientes datos:</p>
+            <div id='monto'>
+                <h4>Monto:</h4>
+                <input type="text" name='dineroPrestamo' class = 'item'/>
+            </div>
+            <div id="plazo">
+                <h4>Plazo (Tiempo en meses):</h4>
+                <input type="text" name='plazo' class = 'item'/>
+            </div>
+            <button class = 'botonPrestamo'>Solicitar</button>
         </div>
         </>
         )
