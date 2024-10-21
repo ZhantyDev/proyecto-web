@@ -33,7 +33,7 @@ function nosotros(){
                     </div>
                 <div id="fotos">
                     <div class ="cuadritosNosotros">
-                        <a class ="letra">Melani</a>
+                        <a class ="letra">Melany</a>
                         <img src= {fotoMela} class = "we" />                        
                     </div>
                     <div class ="cuadritosNosotros">
