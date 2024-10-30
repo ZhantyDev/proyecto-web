@@ -15,5 +15,5 @@ const Registro = async(req, res)=>{
 
 
 export const MetodosEstebanquito = {
-    
+    Registro
 }

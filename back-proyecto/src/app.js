@@ -1,15 +1,16 @@
 import express from 'express';
-import router from './routes/routes.pokemones.js'
+import router from './routes/routes.estebanquito.js'
 import cors from 'cors'
+import config from './config.js';
 
 //se crea una instancia de express
 const app = express();
 
 //defino un puerto
-app.set('port', 3000);
+app.set('port', config.PORT);
 
 //importar rutas
-app.use(router);
+//app.use(router);
 
 //configuracion de cors
 app.use(cors({origin: 'http://localhost:5173'}))
