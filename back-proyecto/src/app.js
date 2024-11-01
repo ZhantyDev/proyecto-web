@@ -7,7 +7,7 @@ import config from './config.js';
 const app = express();
 
 //defino un puerto
-app.set('port', config.PORT);
+app.set('port', 3000);
 
 //importar rutas
 //app.use(router);

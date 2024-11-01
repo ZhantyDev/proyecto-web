@@ -1,5 +1,7 @@
 import {getConnection} from '../database/database.js'
 
+
+//const infoUsuario = async
 const Registro = async(req, res)=>{
     try{
         const connection = await getConnection()

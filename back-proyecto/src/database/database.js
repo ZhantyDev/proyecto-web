@@ -1,16 +1,18 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import mysql from 'mysql2/promise';
-import config from '../config.js';
 
 const connection = mysql.createConnection({
-    host: config.dbHost,
-    user: config.dbUser,
-    password: config.dbPassword,
-    database: config.dbName,
-    port: config.dbPort
-})
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT,
+});
 
 const getConnection = () => {
     return connection;
 }
 
 export {getConnection};
+

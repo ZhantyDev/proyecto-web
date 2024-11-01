@@ -20,7 +20,7 @@
     height: 35px;
     width: 250px;
     display: flex; 
-    margin: 20px;  
+    margin: 12px;  
     background-color: white;
     text-align: center;   
     transition: filter 600ms; 
