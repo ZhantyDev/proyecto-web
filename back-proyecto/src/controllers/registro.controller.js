@@ -1,37 +1,24 @@
-import {getConnection} from '../database/database.js'
+import { getConnection } from "../database/database.js";
 
-let usuarioRegistrado = []
-const Registro = async(req, res)=>{   
-    let connection
-    const email = 'carlos1@example.com'
+export const registro = async(req, res)=>{   
+    let connection 
+    const cuenta_id = 1111111115
+    const nombre ='santiago'
+    const email = 'jdzamora@gmail.com'
     const contraseña = 'password123'
-    try{
-        connection = await  getConnection()
-        const result = await connection.query('select * from Usuarios where email = ?', [email])
-        console.log("conectado")
-        console.log(result[0][0])
-        if (result[0][0].lengt === 0){
-            console.log("no llego")
-            return false;
-        }
-        console.log("casi llega")
-        if (contraseña == result[0][0].contraseña){
-            usuarioRegistrado = result[0];
-            console.log("llego")
-            return true
-        } else{
-            console.log("casi casa pero no caso")
-            return false;
-            
-        }    
-    }catch (error) {
-        console.log(error);
-        return false;
-    }
-}
-export const metodoRegistro = {
-    Registro,
-    usuarioRegistrado
-}
- 
+    const tipo = 'ahorros'
 
+    const query = 'insert into Usuarios (cuenta_id, nombre, email, contraseña, tipo, saldo) values (?, ?, ?, ?, ? ,0)'
+    connection = await  getConnection()
+    const existe = await connection.query('select * from Usuarios where cuenta_id = ?', [cuenta_id])
+    try {
+        if (existe[0][0].nombre !=' '){
+            console.log('usuario ya existente, intente con otro numero telefonico y/o correo electronico')
+        }
+        
+    } catch (error) {
+        const registrarUsuario = await connection.execute(query, [cuenta_id, nombre, email, contraseña, tipo])
+        const us = await connection.query('select * from Usuarios where cuenta_id = ?', [cuenta_id])
+        console.log('usuario registrado exitosamente, welcome ', us[0][0].nombre)
+    }   
+}

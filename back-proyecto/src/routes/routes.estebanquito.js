@@ -1,9 +1,9 @@
 import { Router } from "express";
-import {metodoRegistro} from "../controllers/registro.controller.js";
+import { metodoIngreso } from "../controllers/ingreso.controller.js";
 const router = Router();
 
 
 // rutasss
-router.post('/registro', metodoRegistro.Registro)
+router.post('/ingreso', metodoIngreso.ingreso)
 
 export default router;
