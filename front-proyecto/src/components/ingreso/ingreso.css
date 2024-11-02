@@ -34,7 +34,9 @@
     align-items: center;
     transition: filter 600ms;
   }
-  
+  .x {
+    color:black
+  }
   .item{
     height: 20px;
     width: 200px;
