@@ -10,6 +10,7 @@ const connection = mysql.createConnection({
     port: process.env.DB_PORT,
 });
 
+
 const getConnection = () => {
     return connection;
 }

@@ -7,12 +7,12 @@ import config from './config.js';
 const app = express();
 
 //defino un puerto
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
 
 //importar rutas
 //app.use(router);
 
 //configuracion de cors
 app.use(cors({origin: 'http://localhost:5173'}))
-
+app.use('/api', router )
 export default app;

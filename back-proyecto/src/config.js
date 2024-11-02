@@ -1,6 +1,4 @@
 import { config } from "dotenv";
-
-
 config();
 
 export default{
@@ -12,5 +10,4 @@ export default{
     dbHost: process.env.DB_HOST,
     dbPort: process.env.DB_PORT
 }
-
 export {config}
