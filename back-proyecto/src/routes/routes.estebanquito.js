@@ -1,10 +1,9 @@
 import { Router } from "express";
-import { MetodosEstebanquito } from "../controllers/controller.proyecto.js";
-import cors from 'cors';
+import {metodoRegistro} from "../controllers/registro.controller.js";
 const router = Router();
 
 
 // rutasss
-router.post('/registro', MetodosEstebanquito.Registro)
+router.post('/registro', metodoRegistro.Registro)
 
 export default router;

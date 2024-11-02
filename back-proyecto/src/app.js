@@ -5,6 +5,7 @@ import config from './config.js';
 
 //se crea una instancia de express
 const app = express();
+app.use(express.json())
 
 //defino un puerto
 app.set('port', process.env.PORT || 3000);
