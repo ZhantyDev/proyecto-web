@@ -1,5 +1,6 @@
 import {getConnection} from '../database/database.js'
 
+let usuarioIngresado = null
 
 const ingreso = async(req, res)=>{   
     let connection
@@ -16,7 +17,7 @@ const ingreso = async(req, res)=>{
         }
         console.log("casi llega")
         if (contraseña == result[0][0].contraseña){
-            const usuarioIngresado = result[0][0];
+            usuarioIngresado = result[0][0];
             console.log("usuario confirmado, bienvenido ", result[0][0].nombre)
             return true
         } else{

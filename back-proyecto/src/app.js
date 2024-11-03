@@ -16,4 +16,5 @@ app.set('port', process.env.PORT || 3000);
 //configuracion de cors
 app.use(cors({origin: 'http://localhost:5173'}))
 app.use('/api', router )
+
 export default app;
