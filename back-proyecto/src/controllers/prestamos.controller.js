@@ -8,9 +8,13 @@ export const solicitarPrestamo = async (req, res) => {
         return res.status(400).json({ error: 'Todos los campos son obligatorios' });
     }
 
+    let connection
+
     try {
+        connection = await getConnection()
+
         // Verificar si el usuario existe y obtener el saldo
-        const [userResult] = await db.query(
+        const [userResult] = await connection.query(
             'SELECT saldo FROM Usuarios WHERE cuenta_id = ?',
             [cuenta_id]
         );
@@ -28,7 +32,7 @@ export const solicitarPrestamo = async (req, res) => {
             });
         }
 
-        const [insertResult] = await db.query(
+        const [insertResult] = await connection.query(
             'INSERT INTO Prestamos (usuario_id, monto, plazo, fecha_solicitud) VALUES (?, ?, ?, NOW())',
             [cuenta_id, monto, plazo]
         );
