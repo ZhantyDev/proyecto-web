@@ -36,7 +36,7 @@ function Depositos(){
                 <option value="banco2">Bancolombia</option>
                 <option value="banco3">NU</option>
             </select>
-        </div>
+            </div>
         <div id="cuenta">
             <h4>Numero de cuenta:</h4>
             <input type="number" name='numeroCuenta' className = 'item' />

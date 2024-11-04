@@ -30,15 +30,14 @@ function Principal(){
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
             <a href="#" className="closebtn" onClick={toggleSidebar}>×</a>
                 <a onClick={()=> navigate('/perfil')}>Perfil</a>
-                <a href="#">Configuración</a>
                 <div class="dropdown">
                     <button className='dropbtn' onClick={toggleSidebar}> Transacciones </button>
                     <div class="dropdown-content">
-                        <a href="#">Transferencias</a>
-                        <a href="#">Depósitos</a>
-                        <a href="#">Préstamos</a>
-                        <a href="#">Retiros</a>
-                        <a href="#">Historial</a>
+                        <a href="#" onClick={()=>navigate('/transferencias')}>Transferencias</a>
+                        <a href="#" onClick={()=>navigate('/depositos')}>Depósitos</a>
+                        <a href="#" onClick={()=>navigate('/prestamos')}>Préstamos</a>
+                        <a href="#" onClick={()=>navigate('/retiros')}>Retiros</a>
+                        <a href="#" onClick={()=>navigate('/historial')}>Historial</a>
                     </div>                    
                 </div>
                 <a onClick={()=> navigate('/ayuda')}>Ayuda</a>

@@ -27,21 +27,20 @@ function Historial(){
 
         <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
                 <a href="#" className="closebtn" onClick={toggleSidebar}>×</a>
-                <a href="#">Perfil</a>
-                <a href="#">Configuración</a>
+                <a href="#" onClick={()=> navigate('/perfil')}>Perfil</a>
                 <div class="dropdown">
                     <button className='dropbtn' onClick={toggleSidebar}> Transacciones </button>
                     <div class="dropdown-content">
-                        <a href="#">Transferencias</a>
-                        <a href="#">Depósitos</a>
-                        <a href="#">Préstamos</a>
-                        <a href="#">Retiros</a>
-                        <a href="#">Historial</a>
-                    </div>                    
+                        <a href="#" onClick={()=>navigate('/transferencias')}>Transferencias</a>
+                        <a href="#" onClick={()=>navigate('/depositos')}>Depósitos</a>
+                        <a href="#" onClick={()=>navigate('/prestamos')}>Préstamos</a>
+                        <a href="#" onClick={()=>navigate('/retiros')}>Retiros</a>
+                        <a href="#" onClick={()=>navigate('/historial')}>Historial</a>
+                    </div>                  
                 </div>
-                <a href="#">Ayuda</a>
-                <a href="#">Sobre Armandoestebanquito</a>
-                <a href="#">Cerrar sesión</a>
+                <a href="#" onClick={()=> navigate('/ayuda')}>Ayuda</a>
+                <a href="#" onClick={()=>navigate('/nosotros')}>Sobre Armandoestebanquito</a>
+                <a href="#" onClick={()=>navigate('/')}>Cerrar sesión</a>
         </div>
         </div>
         </>
