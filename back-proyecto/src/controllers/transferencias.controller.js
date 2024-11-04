@@ -2,12 +2,12 @@ import { getConnection } from "../database/database.js";
 
 export const transferir = async (req, res) => {
     let connection;
-    const cuenta_id = JSON.parse(req.headers['usuario']).cuenta_id; // Asegúrate de que esto funcione correctamente
+    const cuenta_id1 = JSON.parse(req.headers['usuario']).cuenta_id;
     const { banco, numeroCuenta, monto } = req.body;
 
     try {
         connection = await getConnection();
-        
+
         if (!banco || !numeroCuenta || !monto) {
             return res.status(400).json({ message: "Todos los campos son obligatorios." });
         }
@@ -17,41 +17,51 @@ export const transferir = async (req, res) => {
             return res.status(400).json({ message: "La cantidad debe ser un número positivo." });
         }
 
-        const [usuario] = await connection.query('SELECT saldo FROM Usuarios WHERE cuenta_id = ?', [cuenta_id]);
-
+        const [usuario] = await connection.query('SELECT saldo FROM Usuarios WHERE cuenta_id = ?', [cuenta_id1]);
         if (!usuario.length) {
-            console.log("Cuenta no encontrada");
             return res.status(404).json({ message: "Cuenta no encontrada" });
         }
 
         const saldoActual = usuario[0].saldo;
 
-        // Verificar si el saldo es suficiente
         if (cantidad > saldoActual) {
-            console.log("Saldo insuficiente");
             return res.status(400).json({ message: "Saldo insuficiente" });
         }
 
-        // Verificar que la cuenta de destino exista
-        const [cuentaDestino] = await connection.query('SELECT cuenta_id FROM Usuarios WHERE cuenta_id = ?', [numeroCuenta]);
-        if (!cuentaDestino.length) {
-            console.log("Cuenta de destino no encontrada");
-            return res.status(404).json({ message: "Cuenta de destino no encontrada" });
+        if (banco === 'Armandoestebanquito') {
+            const [cuentaDestino] = await connection.query('SELECT saldo FROM Usuarios WHERE cuenta_id = ?', [numeroCuenta]);
+
+            if (cuentaDestino.length) {
+                await connection.query('UPDATE Usuarios SET saldo = saldo + ? WHERE cuenta_id = ?', [cantidad, numeroCuenta]);
+            } else {
+                console.log("Cuenta de destino no encontrada en Armandoestebanquito");
+            }
         }
 
-        // Actualizar el saldo en la base de datos
-        await connection.query('UPDATE Usuarios SET saldo = saldo - ? WHERE cuenta_id = ?', [cantidad, cuenta_id]);
-        await connection.query('UPDATE Usuarios SET saldo = saldo + ? WHERE cuenta_id = ?', [cantidad, numeroCuenta]);
+        await connection.query('UPDATE Usuarios SET saldo = saldo - ? WHERE cuenta_id = ?', [cantidad, cuenta_id1]);
 
-        console.log("Transferencia exitosa");
-        res.json({
-            message: "Transferencia exitosa",
-            saldoRestante: saldoActual - cantidad
-        });
+        await connection.query(
+            'INSERT INTO Transacciones (cuenta_id1, cuenta_id2, tipo, monto, fecha) VALUES (?, ?, ?, ?, NOW())',
+            [cuenta_id1, numeroCuenta, 'transferencia', cantidad]
+        );
+
+        await connection.query(
+            'INSERT INTO Reportes (cuenta_id, historico_egresos) VALUES (?, ?) ON DUPLICATE KEY UPDATE historico_egresos = historico_egresos + ?',
+            [cuenta_id1, cantidad, cantidad]
+        );
+
+        if (banco === 'Armandoestebanquito' && cuentaDestino.length) {
+            await connection.query(
+                'INSERT INTO Reportes (cuenta_id, historico_ingresos) VALUES (?, ?) ON DUPLICATE KEY UPDATE historico_ingresos = historico_ingresos + ?',
+                [numeroCuenta, cantidad, cantidad]
+            );
+        }
+
+        res.json({ message: "Transferencia exitosa", saldoRestante: saldoActual - cantidad });
     } catch (error) {
         console.error("Error en la transferencia:", error);
         res.status(500).json({ message: "Error interno del servidor" });
     } finally {
         if (connection) connection.end();
     }
-};
+}
