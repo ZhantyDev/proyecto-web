@@ -2,21 +2,23 @@ import React, {useState} from 'react'
 import './Principal.css'
 import { useNavigate } from 'react-router-dom';
 import icon from '../../assets/depositphotos_119717876-stock-illustration-refund-flat-vector-icon.jpg';
+import { useUser } from '../../context.jsx';
+
 
 
 function Principal(){
     const navigate = useNavigate()
     const [isSidebarOpen, setSidebarOpen] = useState(false);
+    const {user} = useUser()
 
     const toggleSidebar = () => {
         setSidebarOpen(!isSidebarOpen);
     };
-
     return( 
         <>
         <div id='ppal'>
             <h1 className='letra'>Bienvenido a su banco Armandoestebanquito</h1>
-            <h2 className='letra'>Saldo disponible: $$$</h2>
+            <h2 className='letra'>Saldo disponible: {user.saldo}</h2>
             <div className='boton-container'>
                 <button className='btnHistorial' onClick={()=>navigate('/historial')}><img src={icon} className='icono'/></button>
                 <button className='botones' onClick={()=>navigate('/transferencias')}>Transferencias</button>

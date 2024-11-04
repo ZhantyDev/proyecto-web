@@ -2,15 +2,16 @@ import React from 'react'
 import './Ingreso.css'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
+import { useUser } from '../../context.jsx';
 
 function Ingresoregistro(){
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const [form, setForm] = useState({ email: '', contraseña: '' });
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
-
+    const {setUser} =useUser();
     const handleSubmit = async () => {
         try {
             const response = await fetch("http://localhost:3000/api/", {
@@ -20,7 +21,10 @@ function Ingresoregistro(){
             });
 
             const data = await response.json();
-            if (response.ok) {
+            if (response.ok) {               
+                //setUser(data.usuario);
+                setUser(data.usuario)
+                console.log(data.usuario)
                 alert(data.message);
                 navigate('/home');
             } else {
