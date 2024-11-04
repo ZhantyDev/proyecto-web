@@ -1,7 +1,5 @@
 import {getConnection} from '../database/database.js'
 
-let usuarioIngresado = null
-
 const ingreso = async(req, res)=>{   
     let connection
     const { email, contraseña } = req.body
@@ -33,6 +31,5 @@ const ingreso = async(req, res)=>{
 }
  
 export const metodoIngreso = {
-    ingreso,
-    usuarioIngresado
+    ingreso
 };
