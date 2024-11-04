@@ -1,15 +1,16 @@
 import React, {useState} from 'react'
 import './Historial.css'
 import { useNavigate } from 'react-router-dom';
+import { useUser } from '../../context';
 
 function Historial(){
     const navigate = useNavigate()
     const [isSidebarOpen, setSidebarOpen] = useState(false);
-
+    const {user} = useUser()
     const toggleSidebar = () => {
         setSidebarOpen(!isSidebarOpen);
     };
-
+    
     return(
         <>
         <div id='ppal' >

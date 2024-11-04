@@ -3,9 +3,11 @@ import './perfil.css'
 import { useNavigate } from 'react-router-dom';
 import icon from '../../assets/retroceso-rapido.png'
 import iconoPerfil from '../../assets/usuario.png'
+import { useUser } from '../../context.jsx';
 
 function perfil(){
     const navigate = useNavigate()
+    const {user} = useUser()
     return( 
         <> 
         <button className='btnRetroceder' onClick={()=>navigate('/home')}><img src={icon} className='icono'/></button>
@@ -13,9 +15,9 @@ function perfil(){
             <div class ="cuadro1">
                 <img src={iconoPerfil} class = "foto" />
                 <div class = "texto">
-                    <p>Usuario: Usuario1 </p>
-                    <p>Monto: 0.0$ </p>
-                    <p># de usuario: 0 </p>                    
+                    <p>Usuario: {user.nombre} </p>
+                    <p>Monto: {user.saldo}$ </p>
+                    <p># de usuario: {user.cuenta_id} </p>                    
                 </div>
             </div>
             
