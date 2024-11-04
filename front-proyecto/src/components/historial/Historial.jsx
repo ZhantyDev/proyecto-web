@@ -56,9 +56,9 @@ function Historial(){
                     {transacciones.length > 0 ? (
                         transacciones.map((transaccion, index) => (
                             <tr key={index}>
-                                <td>{transaccion.tipo_movimiento}</td>
-                                <td>{transaccion.cantidad}</td>
-                                <td>{transaccion.cuenta_receptora}</td>
+                                <td>{transaccion.tipo}</td>
+                                <td>{transaccion.monto}</td>
+                                <td>{transaccion.cuenta_id1}</td>
                             </tr>
                         ))
                     ) : (
