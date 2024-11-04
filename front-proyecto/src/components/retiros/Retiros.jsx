@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
 import './Retiros.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import icon from '../../assets/retroceso-rapido.png'
 
 function Retiros(){
     const navigate = useNavigate()
+    const [monto, setmonto] = useState('')
+    const[mensaje, setMensaje] = useState('')
+    
     return(
         <>
         <div id = "root">
