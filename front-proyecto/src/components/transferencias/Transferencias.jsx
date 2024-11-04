@@ -39,7 +39,7 @@ function Transferencias() {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "usuario": localStorage.getItem('usuario') // Enviar el usuario si es necesario
+                    "usuario": localStorage.getItem('usuario') 
                 },
                 body: JSON.stringify({ banco, numeroCuenta, monto: cantidad }) // Asegúrate de que la clave sea "monto"
             });

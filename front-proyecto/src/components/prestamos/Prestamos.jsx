@@ -11,26 +11,34 @@ function Prestamos(){
     const [success, setSuccess] = useState('');
 
     const handleSolicitar = async () => {
-        const cuenta_id = 'tu_cuenta_id_aqui'; // Reemplaza con la cuenta_id real del usuario
-
+        const usuario = JSON.parse(localStorage.getItem('usuario'));
+        const cuenta_id = usuario ? usuario.cuenta_id : null;
+        console.log(localStorage.getItem('usuario')); // Verifica el contenido de usuario
+    
+        if (!cuenta_id) {
+            setError('Error: No se encontró el identificador de la cuenta. Por favor, inicia sesión nuevamente.');
+            return;
+        }
+    
         try {
             const response = await fetch('http://localhost:3000/api/prestamos', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'usuario': JSON.stringify(usuario)
                 },
                 body: JSON.stringify({ cuenta_id, monto: parseFloat(monto), plazo }),
             });
-
+    
             const data = await response.json();
-
+    
             if (!response.ok) {
                 setError(data.error);
                 setSuccess('');
             } else {
                 setSuccess(data.message);
+                console.log('Datos enviados:', { cuenta_id, monto, plazo });
                 setError('');
-                // Limpiar los campos después de la solicitud exitosa
                 setMonto('');
                 setPlazo('');
             }
