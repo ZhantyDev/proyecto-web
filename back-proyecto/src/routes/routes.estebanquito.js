@@ -7,7 +7,7 @@ const router = Router();
 
 
 // rutasss
-router.post('/ingreso', metodoIngreso.ingreso)
+router.post('/', metodoIngreso.ingreso)
 router.post('/registro', registro)
 router.post('/historial', historial)
 router.post('/retiros', retirar)
