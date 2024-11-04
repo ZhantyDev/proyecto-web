@@ -1,14 +1,13 @@
 import { getConnection } from "../database/database.js";
+import { metodoIngreso } from "./ingreso.controller.js";
 
 export const retirar = async (req, res) => {
     let connection;
-    const cuenta_id = '3111111111'
-    const cantidad = 200;
+    const {cantidad, cuenta_id} = req.body;
 
     try {
         connection = await getConnection();
         
-        // Verificar que la cuenta existe y obtener el saldo actual
         const [usuario] = await connection.query('SELECT saldo FROM Usuarios WHERE cuenta_id = ?', [cuenta_id]);
         
         if (!usuario.length) {
@@ -18,7 +17,6 @@ export const retirar = async (req, res) => {
 
         const saldoActual = usuario[0].saldo;
 
-        // Verificar si el saldo es suficiente
         if (cantidad > saldoActual) {
             console.log("Saldo insuficiente");
             return res.status(400).json({ message: "Saldo insuficiente" });

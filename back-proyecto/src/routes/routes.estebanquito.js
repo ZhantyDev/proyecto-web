@@ -10,6 +10,6 @@ const router = Router();
 router.post('/', metodoIngreso.ingreso)
 router.post('/registro', registro)
 router.post('/historial', historial)
-router.post('/retiros', retirar)
+router.post('/retiros', retirar);
 
 export default router;

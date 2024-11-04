@@ -40,7 +40,7 @@ function Historial(){
                 </div>
                 <a href="#" onClick={()=> navigate('/ayuda')}>Ayuda</a>
                 <a href="#" onClick={()=>navigate('/nosotros')}>Sobre Armandoestebanquito</a>
-                <a href="#" onClick={()=>navigate('/')}>Cerrar sesión</a>
+                <a href="#" onClick={() => {localStorage.removeItem('usuario'); navigate('/');}}>Cerrar sesión</a>
         </div>
         </div>
         </>

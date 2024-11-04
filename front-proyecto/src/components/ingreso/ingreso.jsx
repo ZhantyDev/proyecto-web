@@ -26,6 +26,7 @@ function Ingresoregistro(){
                 setUser(data.usuario)
                 console.log(data.usuario)
                 alert(data.message);
+                localStorage.setItem('usuario', JSON.stringify(data.usuario));
                 navigate('/home');
             } else {
                 alert(data.message);
