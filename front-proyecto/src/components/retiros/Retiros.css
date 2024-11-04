@@ -57,3 +57,18 @@
     justify-content: center;
     color: #c8b6ff; 
   }
+
+  #monto .item{
+    height: 40px;
+    width: 200px;
+    display: flex; 
+    margin: 10px;  
+    background-color: #bbd0ff;
+    text-align: center;   
+    transition: filter 600ms; 
+  }
+
+  #monto{
+    justify-content: row;
+    color: black
+}

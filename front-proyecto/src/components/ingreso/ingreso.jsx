@@ -22,6 +22,7 @@ function Ingresoregistro(){
             const data = await response.json();
             if (response.ok) {
                 alert(data.message);
+                localStorage.setItem('usuario', JSON.stringify(data.usuario));
                 navigate('/home');
             } else {
                 alert(data.message);
