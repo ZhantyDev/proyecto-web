@@ -38,6 +38,6 @@ export const retirar = async (req, res) => {
         console.error("Error en el retiro:", error);
         res.status(500).json({ message: "Error interno del servidor" });
     } finally {
-        if (connection) connection.release();
+        if (connection) connection.end();
     }
 };
