@@ -6,13 +6,13 @@ export const historial = async (req, res) => {
 
     try {
         connection = await getConnection();
-        const [info] = await connection.query('SELECT * FROM Transacciones WHERE cuenta_id = ?', [cuenta_id]);
+        const [info] = await connection.query('SELECT * FROM Transacciones WHERE cuenta_id1 = ? or cuenta_id2 = ?', [cuenta_id, cuenta_id]);
 
         if (info.length === 0) {
             console.log('No se encontraron reportes');
             return res.status(401).json({ message: "No se encontraron reportes" });
         } else {
-            console.log('Información encontrada:', info);
+            //console.log('Información encontrada:', info);
             return res.status(200).json({ message: "Inicio de sesión exitoso", info });
         }
     } catch (error) {
