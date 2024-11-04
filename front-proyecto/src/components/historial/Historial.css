@@ -10,9 +10,7 @@ td, th {
     padding: 8px;
   }
   
-tr:nth-child(even) {
-    background-color: #2C0735;
-  }
+
 
 .Letra {
     color: #2C0735;
