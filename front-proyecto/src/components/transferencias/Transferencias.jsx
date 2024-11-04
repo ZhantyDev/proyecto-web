@@ -28,7 +28,7 @@ function Transferencias() {
             return;
         }
 
-        const cantidad = parseFloat(monto); // Convertir el monto a número
+        const cantidad = parseFloat(monto);
         if (isNaN(cantidad) || cantidad <= 0) {
             setMensaje('El monto debe ser un número positivo.');
             return;
@@ -39,14 +39,19 @@ function Transferencias() {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+<<<<<<< HEAD
                     "usuario": localStorage.getItem('usuario') 
+=======
+                    "usuario": localStorage.getItem('usuario')
+>>>>>>> 8068b19a5de6874e131a1fd66b2273082186b1f1
                 },
-                body: JSON.stringify({ banco, numeroCuenta, monto: cantidad }) // Asegúrate de que la clave sea "monto"
+                body: JSON.stringify({ banco, numeroCuenta, monto: cantidad })
             });
 
             const data = await response.json();
             if (response.ok) {
                 setMensaje(data.message || "Transferencia exitosa");
+                setTimeout(() => navigate('/home'), 2000);
             } else {
                 setMensaje(data.message || "Error en la transferencia");
             }
@@ -54,7 +59,7 @@ function Transferencias() {
             console.error("Error al realizar la transferencia:", error);
             setMensaje("Error en el servidor");
         }
-    };
+    }
 
     return (
         <>
@@ -84,7 +89,7 @@ function Transferencias() {
                     </div>
                     <div id="cuenta">
                         <h4>Número de cuenta:</h4>
-                        <input type="number" name='numeroCuenta' className='item' value={numeroCuenta} onChange={handleNumeroCuentaChange} />
+                        <input type="number" name='cuenta_id2' className='item' value={numeroCuenta} onChange={handleNumeroCuentaChange} />
                     </div>
                     <div id="monto">
                         <h4>Monto:</h4>

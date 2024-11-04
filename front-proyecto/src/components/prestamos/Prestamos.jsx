@@ -13,7 +13,7 @@ function Prestamos(){
     const handleSolicitar = async () => {
         const usuario = JSON.parse(localStorage.getItem('usuario'));
         const cuenta_id = usuario ? usuario.cuenta_id : null;
-        console.log(localStorage.getItem('usuario')); // Verifica el contenido de usuario
+        console.log(localStorage.getItem('usuario')); 
     
         if (!cuenta_id) {
             setError('Error: No se encontró el identificador de la cuenta. Por favor, inicia sesión nuevamente.');
