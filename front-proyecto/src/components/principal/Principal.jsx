@@ -32,9 +32,9 @@ function Principal(){
             <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
             <a href="#" className="closebtn" onClick={toggleSidebar}>×</a>
                 <a onClick={()=> navigate('/perfil')}>Perfil</a>
-                <div class="dropdown">
+                <div className="dropdown">
                     <button className='dropbtn' onClick={toggleSidebar}> Transacciones </button>
-                    <div class="dropdown-content">
+                    <div className="dropdown-content">
                         <a href="#" onClick={()=>navigate('/transferencias')}>Transferencias</a>
                         <a href="#" onClick={()=>navigate('/depositos')}>Depósitos</a>
                         <a href="#" onClick={()=>navigate('/prestamos')}>Préstamos</a>
