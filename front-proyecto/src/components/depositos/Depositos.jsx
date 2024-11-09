@@ -42,7 +42,7 @@ function Depositos(){
             const data = await response.json();
             if (response.ok) {
                 setMensaje(data.message || "Depósito exitoso");
-                setTimeout(() => navigate('/home'), 2000); // Redirige después de 2 segundos
+                setTimeout(() => navigate('/home'), 2000); 
             } else {
                 setMensaje(data.message || "Error en el depósito");
             }
