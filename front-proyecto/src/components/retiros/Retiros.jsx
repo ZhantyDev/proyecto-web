@@ -2,8 +2,10 @@ import React, {useState} from 'react'
 import './Retiros.css'
 import { useNavigate } from 'react-router-dom'
 import icon from '../../assets/retroceso-rapido.png'
+import { useUser } from '../../context'
 
 function Retiros(){
+    const{user, actualizar} = useUser();
     const navigate = useNavigate()
     const [monto, setMonto] = useState('')
     const [codigoRetiro, setCodigoRetiro] = useState(null);
@@ -13,7 +15,7 @@ function Retiros(){
     
     const generarCodigoRetiro = async () => {
         if (!monto || monto < 10) {
-            setMensaje("Por favor ingrese una cantidad válida (mínimo $10,000).");
+            setMensaje("Por favor ingrese una cantidad válida (mínimo $10.00).");
             return;
         }
 
@@ -29,6 +31,7 @@ function Retiros(){
             const data = await response.json();
             if (response.ok) {
                 setCodigoRetiro(data.codigoRetiro);
+                actualizar('saldo', user.saldo-monto)
                 setMensaje("Retiro exitoso");
             } else {
                 setMensaje(data.message || "Error en el retiro");
@@ -50,7 +53,7 @@ function Retiros(){
                 <input type="number" name='numeroCuenta' className = 'item' value={monto}  onChange={(e) => setMonto(e.target.value)} min="10" placeholder="Ingrese la cantidad" />
             </div>
             <h3>Para realizar un retiro puede acercarse a un corresponsal bancario o cajero electrónico del banco Armandoestebanquito 
-                y con su número de cuenta y el código a continuación puede retirar cualquier monto desde $10.000</h3>
+                y con su número de cuenta y el código a continuación puede retirar cualquier monto desde $10.00</h3>
             <h2>Codigo:</h2>{codigoRetiro ? (
                     <>
                         <h2>Código: {codigoRetiro}</h2>

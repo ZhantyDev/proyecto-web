@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './Transferencias.css';
 import { useNavigate } from 'react-router-dom';
-import icon from '../../assets/retroceso-rapido.png';
+import icon from '../../assets/retroceso-rapido.png'
+import { useUser } from '../../context'
 
 function Transferencias() {
+    const{user, actualizar} = useUser();
     const navigate = useNavigate();
     const [banco, setBanco] = useState('');
     const [numeroCuenta, setNumeroCuenta] = useState('');
@@ -47,6 +49,7 @@ function Transferencias() {
             const data = await response.json();
             if (response.ok) {
                 setMensaje(data.message || "Transferencia exitosa");
+                actualizar('saldo', user.saldo-cantidad)
                 setTimeout(() => navigate('/home'), 2000);
             } else {
                 setMensaje(data.message || "Error en la transferencia");
