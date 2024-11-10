@@ -18,6 +18,8 @@ export const retirar = async (req, res) => {
         const saldoActual = usuario[0].saldo;
 
         if (cantidad > saldoActual) {
+            console.log(cantidad)
+            console.log(saldoActual)
             console.log("Saldo insuficiente");
             return res.status(400).json({ message: "Saldo insuficiente" });
         }
@@ -27,7 +29,10 @@ export const retirar = async (req, res) => {
 
         // Actualizar el saldo en la base de datos
         await connection.query('UPDATE Usuarios SET saldo = saldo - ? WHERE cuenta_id = ?', [cantidad, cuenta_id]);
-
+        await connection.query(
+            'INSERT INTO Transacciones (cuenta_id1, cuenta_id2, tipo, monto, fecha) VALUES (?, ?, ?, ?, NOW())',
+            [cuenta_id, null, 'retiro', cantidad]
+        );
         console.log("Retiro exitoso, código:", codigoRetiro);
         res.json({
             message: "Retiro exitoso",
@@ -37,7 +42,5 @@ export const retirar = async (req, res) => {
     } catch (error) {
         console.error("Error en el retiro:", error);
         res.status(500).json({ message: "Error interno del servidor" });
-    } finally {
-        if (connection) connection.end();
-    }
+    } 
 };

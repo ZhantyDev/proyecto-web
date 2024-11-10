@@ -61,7 +61,5 @@ export const transferir = async (req, res) => {
     } catch (error) {
         console.error("Error en la transferencia:", error);
         res.status(500).json({ message: "Error interno del servidor" });
-    } finally {
-        if (connection) connection.end();
-    }
+    } 
 }
