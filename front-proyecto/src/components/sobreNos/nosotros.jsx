@@ -13,48 +13,50 @@ function nosotros(){
     return( 
         <>
          <button className='btnRetroceder' onClick={()=>navigate('/home')}><img src={icon2} className='icono2'/></button>
-            <div id="fondo">
-                <div class = "container1">
-                    <div id = "texto">
-                        <div class = 'cuadritos'><p class = "letra"><strong>Armandoestebanquito</strong> es un banco digital colombiano fundado en 2024 por 
-                            Santiago, Paula y Melani. Nos enfocamos en ofrecer servicios financieros accesibles, seguros y eficientes para todos.</p>
+            <div id="fondo2">
+                <div id = "container1">
+                    <div id = "textos">
+                        <div id='principal1'>
+                            <div className = 'cuadritos'>
+                                <h3>Armandoestebanquito</h3>
+                                <p>Es un banco digital colombiano fundado en 2024 por Santiago, Paula y Melany. Nos enfocamos en ofrecer servicios financieros accesibles, seguros y eficientes para todos.</p>
+                            </div>
                         </div>
-               
-                        <div class = 'cuadritos'>
-                            <p class = "letra"><strong>Misión:</strong> Proveer soluciones financieras innovadoras centradas en el cliente.</p>
-                        </div>
+                        <div id='VMV'>
+                            <div className = 'cuadritos'>
+                                <h2>Misión</h2>
+                                <p>Proveer soluciones financieras innovadoras centradas en el cliente.</p>
+                            </div>
 
-                        <div class = 'cuadritos'>
-                            <p class = "letra"><strong>Visión:</strong> Ser el banco líder en digitalización y accesibilidad financiera en Colombia para 2030.</p>
-                        </div>
-                        <div class = 'cuadritos'>                            
-                            <p class = "letra"><strong>Valores:</strong> Transparencia, seguridad, innovación y compromiso social.</p>
+                            <div className = 'cuadritos'>
+                                <h2>Visión</h2>
+                                <p>Ser el banco líder en digitalización y accesibilidad financiera en Colombia para 2030.</p>
+                            </div>
+                            <div className = 'cuadritos'> 
+                                <h2>Valores</h2>                           
+                                <p>Transparencia, seguridad, innovación y compromiso social.</p>
+                            </div>
                         </div>
                     </div>
+                    <div id = "container2">
+                        <img id='Casita' src ={icon} ></img>
+                    </div>     
+                </div>
                 <div id="fotos">
-                    <div class ="cuadritosNosotros">
-                        <a class ="letra">Melany</a>
-                        <img src= {fotoMela} class = "we" />                        
+                    <div className ="cuadritosNosotros">
+                        <a className ="letra">Melany</a>
+                        <img src= {fotoMela} className = "we" />                        
                     </div>
-                    <div class ="cuadritosNosotros">
-                        <a class ="letra">Paula</a>
-                        <img src= {fotoPau} class = "we" />
-                        
+                    <div className ="cuadritosNosotros">
+                        <a className ="letra">Paula</a>
+                        <img src= {fotoPau} className = "we" />
                     </div>
-                    <div class ="cuadritosNosotros">
-                        <a class ="letra">Santiago</a>
-                        <img src= {fotoYo} class = "we"/>
+                    <div className ="cuadritosNosotros">
+                        <a className ="letra">Santiago</a>
+                        <img src= {fotoYo} className = "we"/>
                     </div>
-                    
-                </div>
-                        
-                </div>
-                
-                <div class = "container2">
-                    <img src ={icon} ></img>
-                </div>
+                </div> 
             </div>
-
         </> 
     )
 }

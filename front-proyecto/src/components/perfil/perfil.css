@@ -21,3 +21,13 @@
     width: 200px;
     height: 200px;
 }
+
+.cuadro1{
+    color: black;
+    height: 200px;
+    width: 300px;
+    margin: 30px;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #858AE3;
+}

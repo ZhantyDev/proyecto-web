@@ -44,11 +44,11 @@ function Principal(){
                 </div>
                 <a onClick={()=> navigate('/ayuda')}>Ayuda</a>
                 <a onClick={()=>navigate('/nosotros')}>Sobre Armandoestebanquito</a>
-                <a onClick={() => {localStorage.removeItem('usuario'); navigate('/'); 
+                <a onClick={() => {localStorage.removeItem('usuario'); navigate('/'); // Redirige al inicio de sesión
 }}>Cerrar sesión</a>
             </div>
         </div>
-        </>
+</>
     )
 }
 
