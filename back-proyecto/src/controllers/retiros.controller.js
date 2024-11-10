@@ -14,10 +14,8 @@ export const retirar = async (req, res) => {
             return res.status(404).json({ message: "Cuenta no encontrada" });
         }
 
-        const saldoActual = usuario[0].saldo;
+        const saldoActual = Number(usuario[0].saldo);
         if (saldoActual < cantidad) {
-            console.log(cantidad)
-            console.log(saldoActual)
             console.log("Saldo insuficiente");
             return res.status(400).json({ message: "Saldo insuficiente" });
         }
