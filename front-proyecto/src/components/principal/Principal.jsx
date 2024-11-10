@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './Principal.css'
 import { useNavigate } from 'react-router-dom';
-import icon from '../../assets/depositphotos_119717876-stock-illustration-refund-flat-vector-icon.jpg';
+import icon from '../../assets/depositphotos_119717876-stock-illustration-refund-flat-vector-icon-removebg-preview.jpg';
 import { useUser } from '../../context.jsx';
 
 
