@@ -16,8 +16,7 @@ export const retirar = async (req, res) => {
         }
 
         const saldoActual = usuario[0].saldo;
-
-        if (cantidad > saldoActual) {
+        if (saldoActual < cantidad) {
             console.log(cantidad)
             console.log(saldoActual)
             console.log("Saldo insuficiente");
