@@ -38,8 +38,8 @@ function Ingresoregistro(){
 
     return(
         <>
-        <div id = "cuadro">
-            <div className = "cuadrito" >
+        <div id = "cuadroing">
+            <div className = "cuadritoing" >
                 <h1 className = "letra" >Inicio de sesion</h1>
                 <input type="text" name='email' className = 'item' placeholder='Usuario' onChange={handleChange}/>
                 <input type="password" name='contraseña' className = 'item' placeholder='Contraseña' onChange={handleChange}/>

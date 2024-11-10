@@ -54,9 +54,9 @@ function Depositos(){
 
     return(
         <>
-        <div id = "root">
+        <div id = "rootDepositos">
             <button className='btnRetroceder' onClick={()=>navigate('/home')}><img src={icon} className='icono'/></button>
-            <div className = "cuadrado">
+            <div className = "cuadradoDepositos">
                 <h1>Depósitos</h1>
                 <div id="cuenta">
                     <h4>Numero de cuenta:</h4>

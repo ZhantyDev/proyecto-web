@@ -1,4 +1,4 @@
-#cuadro{
+#cuadroing{
   height: 600px;
   width: 100%;
   display: flex;
@@ -6,7 +6,7 @@
   background-color: DFE2DB;
 }
 
-.cuadrito {
+.cuadritoing{
   height: 280px;
   width: 400px;
   margin: 80px;    

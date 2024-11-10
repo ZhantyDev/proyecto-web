@@ -1,28 +1,29 @@
-#fondo{
+#fondo4{
     height: auto;
     width: 60%;
     display: flex;
     margin: 10px;
     align-items: center;
-    justify-content: flex-start;
     transition: filter 600ms;
+    justify-content: center;
 }
+
 .fondo:hover{
     filter: drop-shadow(0 0 2em #9baed8);
   }
 
-.texto{
+.texto4{
     color: black;
     font-size: 20px;
     margin: 20px;
 }
 
-.foto{
+.foto4{
     width: 200px;
     height: 200px;
 }
 
-.cuadro1{
+#cuadro4{
     color: black;
     height: 200px;
     width: 300px;

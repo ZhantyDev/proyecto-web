@@ -1,6 +1,6 @@
-#root {
+#rootDepositos{
   height: 600px;
-  width: 300px;
+  width: 500px;
   display: flex;
   border-radius: 0;
   background-color: #bbd0ff;
@@ -30,9 +30,9 @@
   height: 50px;
 }
   
-.cuadrado {
-  height: 400px;
-  width: 300px;
+.cuadradoDepositos {
+  height: 450px;
+  width: 400px;
   margin: 80px;    
   display: flex;
   border-radius: 30px;

@@ -11,18 +11,15 @@ function perfil(){
     return( 
         <> 
         <button className='btnRetroceder' onClick={()=>navigate('/home')}><img src={icon} className='icono'/></button>
-        <div id = "fondo">
-            <div className ="cuadro1">
-                <img src={iconoPerfil} className = "foto" />
-                <div className = "texto">
+        <div id = "fondo4">
+            <div id ="cuadro4">
+                <img src={iconoPerfil} className = "foto4" />
+                <div className = "texto4">
                     <p>Usuario: {user.nombre} </p>
                     <p>Monto: {user.saldo}$ </p>
                     <p># de usuario: {user.cuenta_id} </p>                    
                 </div>
             </div>
-            
-
-
         </div>
         </> 
     )

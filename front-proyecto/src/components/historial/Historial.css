@@ -1,110 +1,108 @@
 table {
-    font-family: 'Times New Roman', Times, serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
+  font-family: 'Times New Roman', Times, serif;
+  border-collapse: collapse;
+  width: 100%;
+}
   
 td, th {
-    border: 1px solid #2C0735;
-    text-align: left;
-    padding: 8px;
-  }
-  
-
+  border: 1px solid #2C0735;
+  text-align: left;
+  padding: 8px;
+}
 
 .Letra {
-    color: #2C0735;
-    text-align: center;
-    font-size: 2em;
-    justify-content: center;
+  color: #2C0735;
+  text-align: center;
+  font-size: 2em;
+  justify-content: center;
 }
 
 .menu-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: black;
-  }
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+}
 
-  .sidebar {
-    height: 100%; 
-    width: 0; 
-    position: fixed; 
-    top: 0;
-    left: 0;
-    background-color: #9999ff; 
-    overflow-x: hidden;
-    padding-top: 60px;
-  }
+.sidebar {
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  background-color: #9999ff; 
+  overflow-x: hidden;
+  padding-top: 60px;
+}
 
-  .sidebar.open {
-    width: 280px;
-  }
+.sidebar.open {
+  width: 280px;
+}
 
-  .sidebar a {
-    padding: 8px 8px 8px 3px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #2C0735;
-    display: block;
-    transition: 0.3s;
-  }
+.sidebar a {
+  padding: 8px 8px 8px 3px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2C0735;
+  display: block;
+  transition: 0.3s;
+}
 
-  .sidebar a:hover {
-    color: #613DC1;
-  }
+.sidebar a:hover {
+  color: #613DC1;
+}
 
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
-  .dropbtn {
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: #2C0735;
-    padding: 16px;
-    font-size: 30px;
-    border: none;
-    cursor: pointer;
-  }
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #2C0735;
+  padding: 16px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
   
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
   
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #9999ff;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9999ff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
   
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
   
-  .dropdown-content a:hover {color: #613DC1}
+.dropdown-content a:hover {color: #613DC1}
   
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
   
-  .dropdown:hover .dropbtn {
-    background-color: #9999ff;
-  }
+.dropdown:hover .dropbtn {
+  background-color: #9999ff;
+}

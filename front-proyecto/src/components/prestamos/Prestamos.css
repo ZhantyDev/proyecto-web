@@ -1,83 +1,83 @@
-  .cuadrado {
-    height: 400px;
-    width: 600px;
-    margin: 100px;    
-    display: flex;
-    border-radius: 0;
-    flex-wrap: wrap;
-    background-color: #858AE3;
-    flex-direction: column;
-    align-items: center;
-    transition: filter 600ms;
-    color: black;
-  }
-  .cuadrito:hover {
-    filter: drop-shadow(0 0 2em #4E148C);
-  }
+.cuadrado {
+  height: 400px;
+  width: 600px;
+  margin: 100px;    
+  display: flex;
+  border-radius: 0;
+  flex-wrap: wrap;
+  background-color: #858AE3;
+  flex-direction: column;
+  align-items: center;
+  transition: filter 600ms;
+  color: black;
+}
+.cuadrito:hover {
+  filter: drop-shadow(0 0 2em #4E148C);
+}
   
-  #monto .item{
-    height: 40px;
-    width: 200px;
-    display: flex;  
-    background-color: #BBD0FF;
-    text-align: center;   
-    transition: filter 600ms; 
-    color: black;
-  }
+#monto .item{
+  height: 40px;
+  width: 200px;
+  display: flex;  
+  background-color: #BBD0FF;
+  text-align: center;   
+  transition: filter 600ms; 
+  color: black;
+}
   
-  #plazo .item{
-    height: 40px;
-    width: 200px;
-    display: flex;  
-    background-color: #BBD0FF;
-    text-align: center;   
-    transition: filter 600ms; 
-    color: black;
-  }
+#plazo .item{
+  height: 40px;
+  width: 200px;
+  display: flex;  
+  background-color: #BBD0FF;
+  text-align: center;   
+  transition: filter 600ms; 
+  color: black;
+}
 
-  #banco select{
-    width: 200px;
-    height: 40px;
-    color: black;
-    background-color: #BBD0FF;
-  }
+#banco select{
+  width: 200px;
+  height: 40px;
+  color: black;
+  background-color: #BBD0FF;
+}
   
-  .botonPrestamo{
-    height: 50px;
-    width: 25%;
-    margin: 5px;    
-    display: flex;   
-    border-radius: 10%;    
-    background-color: #2C0735;
-    justify-content: center; 
-    align-items: center;
-  }
+.botonPrestamo{
+  height: 50px;
+  width: 25%;
+  margin: 5px;    
+  display: flex;   
+  border-radius: 10%;    
+  background-color: #2C0735;
+  justify-content: center; 
+  align-items: center;
+}
 
-    #banco{
-        flex-direction: row;
-        color: black;
-    }
+#banco{
+  flex-direction: row;
+  color: black;
+}
 
-    #monto{
-        justify-content: row;
-        color: black
-    }
+#monto{
+  justify-content: row;
+  color: black
+}
 
-    .btnRetroceder{
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 70px;
-      height: 70px; 
-      border: none;
-      background-color: transparent;
-      color: black;
-    }
+.btnRetroceder{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 70px;
+  height: 70px; 
+  border: none;
+  background-color: transparent;
+  color: black;
+}
   
-    .icono{
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 50px;
-      height: 50px;
-    }
+.icono{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+}
