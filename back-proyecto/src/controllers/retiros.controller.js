@@ -1,5 +1,4 @@
 import { getConnection } from "../database/database.js";
-import { metodoIngreso } from "./ingreso.controller.js";
 
 export const retirar = async (req, res) => {
     let connection;
