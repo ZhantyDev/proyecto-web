@@ -2,8 +2,10 @@ import React, {useState} from 'react'
 import './Depositos.css'
 import { useNavigate } from 'react-router-dom';
 import icon from '../../assets/retroceso-rapido.png'
+import { useUser } from '../../context'
 
 function Depositos(){
+    const{user, actualizar} = useUser();
     const navigate = useNavigate()
     const [numeroCuenta, setNumeroCuenta] = useState('');
     const [dineroDepositado, setDineroDepositado] = useState('');
@@ -42,6 +44,7 @@ function Depositos(){
             const data = await response.json();
             if (response.ok) {
                 setMensaje(data.message || "Depósito exitoso");
+                actualizar('saldo', user.saldo-cantidad)
                 setTimeout(() => navigate('/home'), 2000); 
             } else {
                 setMensaje(data.message || "Error en el depósito");
@@ -67,6 +70,7 @@ function Depositos(){
                     <input type="text" name='dineroDepositado' className = 'item' value={dineroDepositado} onChange={handleDineroDepositadoChange}/>
                 </div>
                 <button className = 'botonDeposito' onClick={handleConfirmar}>Confirmar</button>
+                {mensaje && <p>{mensaje}</p>}
             </div>
         </div>
         </>
