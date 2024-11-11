@@ -50,7 +50,7 @@ function Historial(){
                     <tr>
                         <th class="Letra">Tipo de movimiento</th>
                         <th class="Letra">Cantidad de dinero</th>
-                        <th class="Letra">Cuenta receptora</th>
+                        <th class="Letra">Cuenta principal</th>
                     </tr>
                 </thead>
                 <tbody class = "letra">
